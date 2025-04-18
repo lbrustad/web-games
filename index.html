@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games by Lasse Brustad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Games by Lasse Brustad</h1>
+
+        <div class="card" data-url="snake/v1/">
+            <h2>Snake v1</h2>
+            <p>In September 2017, with less than a year of experience, I wanted to develop my very first game. Snake.</p>
+            <p>Well, you probably know it from the old Nokia cellphones, if you're old enough.</p>
+            <p>There's a catch, tho. I were going to develop it during a single day, and it has never been modified since.</p>
+            <p>You'll experience the horrible performance of what a newbie I was, and a single, but game-breaking bug, if you can tolerate the poor gaming experience.</p>
+            <p>Good luck, and have fun!</p>
+        </div>
+
+        <div class="card" data-url="snake/v2/">
+            <h2>Snake v2</h2>
+            <p>As my knowledge grew, and I still had Snake v1 online, I figured out, <span class="italic">now it's time to develop a new game!</span></p>
+            <p>So, what to develop? Snake ... AGAIN!</p>
+            <p>And here we go, around April 2022, I started developing Snake v2!</p>
+            <p>By the way! There's a new catch.</p>
+            <p>I had very little experience with Object Oriented Programming, so I wanted Snake v2 to be my starting OOP challenge.</p>
+            <p>Code quality? Way better than Snake v1, but it could still be even better. This game isn't proper OOP.</p>
+            <p>Other than that, the game could run smooth on your grandma's toaster from the 1970's.</p>
+            <p>But did I complete it? Well, mostly. Just reload the website to get a new random map to play.</p>
+        </div>
+
+        <div class="card" data-url="memgame/">
+            <h2>Memgame</h2>
+            <p>August 2023, a friend developed a buggy game, and asked me to help fixing it. Memgame.</p>
+            <p>You've probably tried a similar game, where you flip 2 images, and if it's matching, you get points. Otherwise, those images flip back, and you have to memorize.</p>
+            <p>Aparently, I figured out I wanted to develop a similar game, too.</p>
+            <p>Guess what? There's a catch!</p>
+            <p>As I've been playing <span class="italic">A LOT</span> with cheating in text based web games, I wanted to develop this close to perfectly impossible to cheat at.</p>
+            <p>This does result in difficulties, as there's multiple easy cheating solutions in offline web games.</p>
+            <p>Expect weird behavior, if you try to cheat!</p>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.card').forEach(el => {
+            const url = el.getAttribute('data-url');
+
+            el.addEventListener('click', e => {
+                location.pathname = url;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+:root {
+    --clr-bg: #222;
+    --clr-fg: #FAFAFA;
+    --clr-border: #7777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-bg);
+    color: var(--clr-fg);
+    display: grid;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: auto 1fr auto;
+    height: calc(100vh - 2rem);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    grid-column: 2;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.card {
+    cursor: pointer;
+    border: 1px solid var(--clr-border);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.card p {
+    margin-top: .5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+    }
+}
