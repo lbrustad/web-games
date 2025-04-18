@@ -1,0 +1,54 @@
+* {
+    background-color: #14141f;
+}
+
+body {
+    height: 100vh;
+}
+
+body,
+.container,
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1,
+h2 {
+    color: rgb(206, 23, 206);
+    text-shadow: 4px 1px black;
+    font-family: 'Quicksand', sans-serif;
+    user-select: none;
+}
+
+.scoreboard span,
+h2 span {
+    color: #da53f8;
+    text-shadow: 4px 1px black;
+    font-family: 'Quicksand', sans-serif;
+    user-select: none;
+
+}
+
+.center-gameboard {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#gameboard {
+    --items-width: 5;
+    width: calc(100px * var(--items-width));
+    display: flex;
+    flex-wrap: wrap;
+    outline-color: black;
+    outline-style: double;
+}
+
+#gameboard > * {
+    outline: 1px double black;
+    width: 100px;
+    height: 100px;
+}
